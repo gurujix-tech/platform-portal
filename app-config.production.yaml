@@ -48,6 +48,11 @@ catalog:
     - type: file
       target: ./catalog/platform.yaml
 
+    # service-orders is not copied into the portal image.
+    # After https://github.com/gurujix-tech/service-orders exists, load it with:
+    # - type: url
+    #   target: https://github.com/gurujix-tech/service-orders/blob/main/catalog-info.yaml
+
     - type: file
       target: ./examples/template/template.yaml
       rules:

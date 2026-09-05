@@ -206,6 +206,12 @@ catalog:
     - type: file
       target: ../../catalog/platform.yaml
 
+    # Local workspace sibling: service-orders identity (Phase 2 reference workload).
+    # Path is relative to packages/backend → repo root → sibling folder.
+    # Later (when the service is on GitHub): prefer a url location to catalog-info.yaml.
+    - type: file
+      target: ../../../service-orders/catalog-info.yaml
+
     # Stock scaffolder example so Create UI stays explorable until Phase 3 golden paths.
     - type: file
       target: ../../examples/template/template.yaml

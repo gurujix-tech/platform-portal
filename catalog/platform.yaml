@@ -20,3 +20,13 @@ metadata:
 spec:
   owner: platform-team
   domain: gurujix
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: storefront
+  title: Gurujix Storefront
+  description: Living-proof e-commerce workloads (orders and future catalog/media/search services).
+spec:
+  owner: storefront-team
+  domain: gurujix
