@@ -207,18 +207,14 @@ catalog:
       target: ../../catalog/platform.yaml
 
     # Local workspace sibling: service-orders identity (Phase 2 reference workload).
-    # Path is relative to packages/backend → repo root → sibling folder.
-    # Later (when the service is on GitHub): prefer a url location to catalog-info.yaml.
     - type: file
       target: ../../../service-orders/catalog-info.yaml
 
-    # Stock scaffolder example so Create UI stays explorable until Phase 3 golden paths.
+    # Gurujix Python service golden path (Phase 3).
     - type: file
-      target: ../../examples/template/template.yaml
+      target: ../../../template-python-service/template.yaml
       rules:
         - allow: [Template]
-
-    # Demo entities intentionally not loaded (examples/entities.yaml, examples/org.yaml).
 
 kubernetes:
   # see https://backstage.io/docs/features/kubernetes/configuration for kubernetes configuration options
