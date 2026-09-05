@@ -190,6 +190,17 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
+    # This repo's own identity (root catalog-info.yaml).
+    # Path is relative to packages/backend (where the backend process runs).
+    - type: file
+      target: ../../catalog-info.yaml
+
+    # Gurujix ownership (platform-team). Demo guests group still loaded below.
+    - type: file
+      target: ../../catalog/org.yaml
+      rules:
+        - allow: [User, Group]
+
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
       target: ../../examples/entities.yaml

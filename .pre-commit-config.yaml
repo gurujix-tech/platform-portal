@@ -1,0 +1,13 @@
+# Local git hooks for platform-portal.
+# Install once per machine:
+#   brew install pre-commit
+#   pre-commit install
+# Manual scan of the whole repo:
+#   pre-commit run --all-files
+#
+# Purpose: block accidental commits of secrets/credentials before they hit GitHub.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      - id: gitleaks

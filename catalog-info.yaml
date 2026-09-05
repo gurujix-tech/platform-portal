@@ -1,13 +1,25 @@
+# This file describes THIS repository as a Software Catalog Component.
+# It is the "name tag" for the platform-portal git repo itself.
+# Docs: https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+#
+# Note: Backstage only shows this in the UI after app-config.yaml lists it
+# under catalog.locations (next micro-step). Until then it is still the
+# correct identity file for the repo / future GitHub registration.
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: platform-portal
-  description: An example of a Backstage application.
-  # Example for optional annotations
+  title: Platform Portal
+  description: Backstage developer portal for the Gurujix Internal Developer Platform.
+  links:
+    - url: https://gurujix.com/
+      title: Gurujix hub
+      icon: web
+  # After the GitHub remote exists, uncomment:
   # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  #   github.com/project-slug: gurujix-tech/platform-portal
 spec:
   type: website
-  owner: john@example.com
   lifecycle: experimental
+  # Owned by the Gurujix Platform Team (see catalog/org.yaml).
+  owner: platform-team

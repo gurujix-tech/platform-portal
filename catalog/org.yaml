@@ -1,0 +1,17 @@
+# Ownership model for Gurujix (who is accountable).
+# Docs: https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+#
+# This step only adds the Platform Team group.
+# Demo Group "guests" still comes from examples/org.yaml for now.
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  title: Platform Team
+  description: Owns the Gurujix Internal Developer Platform and golden paths.
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Platform Team
+    email: platform@gurujix.com
