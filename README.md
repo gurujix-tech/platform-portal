@@ -13,6 +13,7 @@ Backstage-based Internal Developer Platform portal for Gurujix.
 - Node.js 22 or 24 (`nvm use` reads `.nvmrc`)
 - Yarn 4 via Corepack (`corepack enable`)
 - Git
+- Docker (used locally by TechDocs generation)
 
 ## Start locally
 
@@ -23,7 +24,7 @@ yarn start
 
 Open `http://localhost:3000`. Local auth uses the guest provider.
 
-## Software Catalog (Phase 1)
+## Software Catalog
 
 | File | What it defines |
 | --- | --- |
@@ -43,6 +44,13 @@ Domain: gurujix
               owner: platform-team
 ```
 
+## TechDocs
+
+Docs live next to the code (`docs/` + `mkdocs.yml`).
+
+In the portal UI: open **platform-portal** → **Docs**.  
+First build may take a minute (TechDocs runs via Docker locally).
+
 ## Secrets and git hygiene
 
 - Never commit `.env`, tokens, keys, or credentials.
@@ -56,4 +64,4 @@ pre-commit run --all-files
 
 ## Note
 
-This repo is the platform front door. Application microservices are separate repos (later phases).
+This repo is the platform front door. Application microservices are separate repos created later as platform reference workloads.

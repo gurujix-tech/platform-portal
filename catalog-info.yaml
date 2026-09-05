@@ -13,9 +13,9 @@ metadata:
     - url: https://gurujix.com/
       title: Gurujix hub
       icon: web
-  # After the GitHub remote exists, uncomment:
-  # annotations:
-  #   github.com/project-slug: gurujix-tech/platform-portal
+  annotations:
+    github.com/project-slug: gurujix-tech/platform-portal
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: experimental

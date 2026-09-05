@@ -1,0 +1,6 @@
+site_name: Gurujix Platform Portal
+site_description: Developer portal documentation for the Gurujix Internal Developer Platform
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
