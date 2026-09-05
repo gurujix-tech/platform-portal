@@ -2,9 +2,7 @@
 # It is the "name tag" for the platform-portal git repo itself.
 # Docs: https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 #
-# Note: Backstage only shows this in the UI after app-config.yaml lists it
-# under catalog.locations (next micro-step). Until then it is still the
-# correct identity file for the repo / future GitHub registration.
+# Loaded into the running catalog via app-config.yaml → catalog.locations.
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -23,3 +21,5 @@ spec:
   lifecycle: experimental
   # Owned by the Gurujix Platform Team (see catalog/org.yaml).
   owner: platform-team
+  # Belongs to the developer-platform system (see catalog/platform.yaml).
+  system: developer-platform

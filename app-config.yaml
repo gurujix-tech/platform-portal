@@ -1,5 +1,5 @@
 app:
-  title: Scaffolded Backstage App
+  title: Gurujix Platform Portal
   baseUrl: http://localhost:3000
 
   # Enable all packages by default, this will discover packages from packages/app/package.json
@@ -188,44 +188,31 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    # Domain added so catalog/platform.yaml can be ingested.
+    - allow: [Component, System, API, Resource, Location, Domain]
   locations:
     # This repo's own identity (root catalog-info.yaml).
     # Path is relative to packages/backend (where the backend process runs).
     - type: file
       target: ../../catalog-info.yaml
 
-    # Gurujix ownership (platform-team). Demo guests group still loaded below.
+    # Gurujix ownership (platform-team).
     - type: file
       target: ../../catalog/org.yaml
       rules:
         - allow: [User, Group]
 
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    # Gurujix domain + system map.
     - type: file
-      target: ../../examples/entities.yaml
+      target: ../../catalog/platform.yaml
 
-    # Local example template
+    # Stock scaffolder example so Create UI stays explorable until Phase 3 golden paths.
     - type: file
       target: ../../examples/template/template.yaml
       rules:
         - allow: [Template]
 
-    # Local example organizational data
-    - type: file
-      target: ../../examples/org.yaml
-      rules:
-        - allow: [User, Group]
-
-    ## Uncomment these lines to add more example data
-    # - type: url
-    #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
-
-    ## Uncomment these lines to add an example org
-    # - type: url
-    #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
-    #   rules:
-    #     - allow: [User, Group]
+    # Demo entities intentionally not loaded (examples/entities.yaml, examples/org.yaml).
 
 kubernetes:
   # see https://backstage.io/docs/features/kubernetes/configuration for kubernetes configuration options
@@ -237,5 +224,5 @@ permission:
 
 # see https://backstage.io/docs/ai/mcp-actions for more details
 mcpActions:
-  name: 'My Company Backstage' # defaults to "backstage"
-  description: 'Tools for managing your software catalog, creating new services from templates, and exploring your developer portal' # optional
+  name: 'Gurujix Platform Portal'
+  description: 'Tools for managing the Gurujix software catalog, creating services from templates, and exploring the developer portal'

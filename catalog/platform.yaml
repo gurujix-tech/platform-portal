@@ -1,0 +1,22 @@
+# Gurujix catalog map: Domain → System
+# (Component platform-portal links here via catalog-info.yaml)
+# Docs: https://backstage.io/docs/features/software-catalog/descriptor-format
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: gurujix
+  title: Gurujix
+  description: Gurujix engineering domain — hub site, developer platform, and demo workloads.
+spec:
+  owner: platform-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: developer-platform
+  title: Developer Platform
+  description: Internal Developer Platform (catalog, docs, templates, operational visibility).
+spec:
+  owner: platform-team
+  domain: gurujix
