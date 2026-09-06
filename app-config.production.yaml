@@ -52,13 +52,7 @@ catalog:
     - type: url
       target: https://github.com/gurujix-tech/service-orders/blob/main/catalog-info.yaml
 
-    
     - type: url
       target: https://github.com/gurujix-tech/template-python-service/blob/main/template.yaml
-      rules:
-        - allow: [Template]
-
-    - type: file
-      target: ./examples/template/template.yaml
       rules:
         - allow: [Template]
